@@ -23,6 +23,8 @@ export default {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    /* position: fixed; */
+    z-index: 2;
   }
 
   nav #logo-box {
