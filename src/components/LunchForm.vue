@@ -118,7 +118,7 @@ input, select {
   border-radius: 10px;
   color: #fff;
   font-weight: bold;
-  border: 2px solid #588157;
+  border: none;
   padding: 10px;
   font-size: 16px;
   margin: 0 auto;
@@ -127,7 +127,7 @@ input, select {
 }
 
 .submit-btn:hover {
-  background-color: transparent;
+  background-color: #66aa66;
 }
 
 </style>

@@ -1,65 +1,65 @@
 {
   "ingredientes": {
-    "paes": [
+    "massas": [
       {
         "id": 1,
-        "tipo": "Italiano Branco"
+        "tipo": "Espaguete"
       },
       {
         "id": 2,
-        "tipo": "3 Queijos"
+        "tipo": "Espaguete Integral"
       },
       {
         "id": 3,
-        "tipo": "Parmesão e Orégano"
+        "tipo": "Gnocchi"     
       },
       {
         "id": 4,
-        "tipo": "Integral"
+        "tipo": "Cabelo de anjo"
       }
     ],
     "carnes": [
       {
         "id": 1,
-        "tipo": "Maminha"
+        "tipo": "Peito de frango"
       },
       {
         "id": 2,
-        "tipo": "Alcatra"
+        "tipo": "Filé de tilápia"
       },
       {
         "id": 3,
-        "tipo": "Picanha"
+        "tipo": "Carne moída"
       },
       {
         "id": 4,
-        "tipo": "Veggie burger"
+        "tipo": "Bife Veggie"
       }
     ],
     "opcionais": [
       {
         "id": 1,
-        "tipo": "Bacon"
+        "tipo": "Ovos cozidos"
       },
       {
         "id": 2,
-        "tipo": "Cheddar"
+        "tipo": "Arroz integral"
       },
       {
         "id": 3,
-        "tipo": "Salame"
+        "tipo": "Arroz branco"
       },
       {
         "id": 4,
-        "tipo": "Tomate"
+        "tipo": "Salada verde"
       },
       {
         "id": 4,
-        "tipo": "Cebola roxa"
+        "tipo": "Batata doce"
       },
       {
         "id": 4,
-        "tipo": "Pepino"
+        "tipo": "Salada cozida"
       }
     ]
   },
@@ -77,5 +77,5 @@
       "tipo": "Finalizado"
     }
   ],
-  "burgers": []
+  "saladas": []
 }
