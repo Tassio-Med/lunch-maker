@@ -15,14 +15,14 @@ export default {
     background-image: url('/public/img/healthy-food.jpg');
     background-position: 0 -150px;
     background-size: cover;
-    height: 500px;
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    position: absolute;
+    /* position: absolute;
     top: 0;
     right: 0;
     left: 0;
-    z-index: -1;
+    z-index: -1; */
   }
 </style>>
