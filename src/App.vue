@@ -34,6 +34,7 @@ export default {
   .main-container {
     margin: 50px;
     min-height: 250px;
+    /* background-color: #dad7cd; */
   }
 
   h1 {
