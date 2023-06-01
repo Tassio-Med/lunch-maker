@@ -11,7 +11,7 @@
       },
       {
         "id": 3,
-        "tipo": "Gnocchi"     
+        "tipo": "Gnocchi"
       },
       {
         "id": 4,
@@ -77,5 +77,16 @@
       "tipo": "Finalizado"
     }
   ],
-  "saladas": []
+  "pratos": [
+    {
+      "nome": "Tássio Henrique Fernandes Medeiros",
+      "carne": "Peito de frango",
+      "opcionais": [
+        "Salada verde",
+        "Salada cozida"
+      ],
+      "status": "Solicitado",
+      "id": 1
+    }
+  ]
 }

@@ -1,7 +1,7 @@
 <template>
   <h1>Componente de mensagem</h1>
   <div>
-    <form id="lunch-form">
+    <form id="lunch-form" @submit="createLunch">
       <div class="input-container">
         <label for="nome">Nome do cliente:</label>
         <input 
@@ -42,7 +42,7 @@
         </div>
       </div>
       <div class="input-container">
-        <input type="text" class="submit-btn" value="Criar minha refeição!">
+        <input type="submit" class="submit-btn" value="Criar minha refeição!">
       </div>
     </form>
   </div>
@@ -60,7 +60,7 @@ export default {
       pao: null,
       carne: null,
       opcionais: [],
-      status: 'Solicitado',
+      status: "Solicitado",
       msg: null
     }
   },
@@ -73,6 +73,34 @@ export default {
       this.massas = data.massas;
       this.carnes = data.carnes;
       this.opcionaisdata = data.opcionais;
+
+    },
+    async createLunch(e) {
+      
+      e.preventDefault()
+
+      const data = {
+        nome: this.nome,
+        carne: this.carne,
+        massa: this.massa,
+        opcionais: Array.from(this.opcionais),
+        status: "Solicitado"
+      }
+
+      const dataJson = JSON.stringify(data);
+
+      const req = await fetch("http://localhost:3000/pratos", {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: dataJson
+      });
+
+      const res = await req.json();
+
+      this.nome = "";
+      this.carne = "";
+      this.massa = "";
+      this.opcionais = "";
 
     }
   },
