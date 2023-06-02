@@ -1,5 +1,5 @@
 <template>
-  <h1>Componente de mensagem</h1>
+  <Message :msg="msg" v-show="msg" />
   <div>
     <form id="lunch-form" @submit="createLunch">
       <div class="input-container">
@@ -49,8 +49,12 @@
 </template>
 
 <script>
+
+import Message from './Message.vue'
+
 export default {
   name: "LunchForm",
+
   data(){
     return {
       massas: null,
@@ -64,6 +68,7 @@ export default {
       msg: null
     }
   },
+
   methods: {
     async getIngredientes() {
 
@@ -97,6 +102,10 @@ export default {
 
       const res = await req.json();
 
+      this.msg=`Pedido Nª ${res.id} realizado com sucesso!`;
+
+      setTimeout(() => this.msg = "", 3000);
+
       this.nome = "";
       this.carne = "";
       this.massa = "";
@@ -106,6 +115,10 @@ export default {
   },
   mounted() {
     this.getIngredientes()
+  },
+
+  components: {
+    Message
   }
 }
 </script>
