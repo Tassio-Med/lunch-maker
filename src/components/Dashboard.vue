@@ -4,23 +4,23 @@
       <div id="lunch-table-heading">
         <div class="order-id">#:</div>
         <div>Cliente:</div>
-        <div>Pão:</div>
+        <div>Massa:</div>
         <div>Carne:</div>
         <div>Opcionais:</div>
         <div>Ações:</div>
       </div>
     </div>
     <div id="lunch-table-rows">
-      <div class="lunch-table-row">
-        <div class="order-number">1</div>
-        <div>Tássio</div>
-        <div>Amanda</div>
-        <div>Miguel</div>
+      <div class="lunch-table-row" v-for="lunch in lunches" :key="lunch.id">
+        <div class="order-number">{{ lunch.id }}</div>
+        <div>{{ lunch.nome }}</div>
+        <div>{{ lunch.massa }}</div>
+        <div>{{ lunch.carne }}</div>
         <div>
           <ul>
-            <li>Salame</li>
-            <li>Tomate</li>
-            <li>Queijo</li>
+            <li v-for="(opcional, index) in lunch.opcionais" :key="index">
+              {{ opcional }}
+            </li>
           </ul>
         </div>
         <div>
@@ -38,7 +38,27 @@
 
 <script>
 export default {
-  name: "Dashboard"
+  name: "Dashboard",
+  data(){
+    return {
+      lunches: null,
+      lunches_null: null,
+      status: []
+    }
+  },
+  methods: {
+    async getPedidos(){
+
+      const req = await fetch("http://localhost:3000/pratos");
+
+      const data = await req.json();
+
+      this.lunches = data;
+    }
+  },
+  mounted(){
+    this.getPedidos();
+  }
 }
 </script>
 
