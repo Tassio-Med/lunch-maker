@@ -13,8 +13,8 @@
         >
       </div>
       <div class="input-container">
-        <label for="pao">Escolha um tipo de massa:</label>
-        <select name="pao" id="pao" v-model="pao">
+        <label for="massa">Escolha um tipo de massa:</label>
+        <select name="massa" id="massa" v-model="massa">
           <option value="">Selecione um tipo de massa</option>
           <option v-for="massa in massas" :key="massa.id" :value="massa.tipo">
             {{ massa.tipo }}
@@ -61,7 +61,6 @@ export default {
       carnes: null,
       opcionaisdata: null,
       nome: null,
-      pao: null,
       carne: null,
       opcionais: [],
       status: "Solicitado",
@@ -94,7 +93,7 @@ export default {
 
       const dataJson = JSON.stringify(data);
 
-      const req = await fetch("http://localhost:3000/pratos", {
+      const req = await fetch("http://localhost:3000/lunches", {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: dataJson
