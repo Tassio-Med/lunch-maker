@@ -77,45 +77,37 @@
       "tipo": "Finalizado"
     }
   ],
-  "pratos": [
+  "lunches": [
     {
       "nome": "Tássio Henrique Fernandes Medeiros",
-      "carne": "Peito de frango",
-      "opcionais": [
-        "Arroz integral",
-        "Batata doce"
-      ],
-      "status": "Solicitado",
-      "id": 2
-    },
-    {
-      "nome": "Amanda Portela",
-      "carne": "Carne moída",
-      "massa": "",
-      "opcionais": [],
-      "status": "Solicitado",
-      "id": 3
-    },
-    {
-      "nome": "Miguel Mesquita",
       "carne": "Filé de tilápia",
-      "opcionais": [
-        "Arroz branco",
-        "Batata doce",
-        "Salada verde"
-      ],
-      "status": "Solicitado",
-      "id": 4
-    },
-    {
-      "nome": "Wallyson Lopes",
-      "carne": "Bife Veggie",
+      "massa": "Espaguete",
       "opcionais": [
         "Ovos cozidos",
         "Salada cozida"
       ],
       "status": "Solicitado",
-      "id": 5
+      "id": 1
+    },
+    {
+      "nome": "Amanda Portela",
+      "carne": "Carne moída",
+      "massa": "Espaguete Integral",
+      "opcionais": [],
+      "status": "Solicitado",
+      "id": 3
+    },
+    {
+      "nome": "João Mendes",
+      "carne": "Filé de tilápia",
+      "massa": "Espaguete",
+      "opcionais": [
+        "Ovos cozidos",
+        "Salada verde",
+        "Salada cozida"
+      ],
+      "status": "Solicitado",
+      "id": 4
     }
   ]
 }
