@@ -32,7 +32,7 @@
               {{ s.tipo }}
             </option>
           </select>
-          <button class="delete-btn">Cancelar</button>
+          <button class="delete-btn" @click="deleteLunch(lunch.id)">Cancelar</button>
         </div>
       </div>
     </div>
@@ -69,9 +69,19 @@ export default {
 
       this.status = data;
 
-      console.log(data);
+    },
 
+    async deleteLunch(id) {
+
+      const req = await fetch(`http://localhost:3000/pratos/${id}`, {
+        method: "DELETE"
+      });
+
+      const res = await req.json();
+
+      this.getPedidos();
     }
+
   },
   mounted(){
     this.getPedidos();
